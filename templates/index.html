@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Image</title>
+    <script>
+        function submitForm() {
+            // Get the file input element
+            var fileInput = document.getElementById("image");
+
+            // Check if a file is selected
+            if (fileInput.files.length === 0) {
+                alert("Please select an image file.");
+                return;
+            }
+
+            // Submit the form
+            document.getElementById("uploadForm").submit();
+        }
+    </script>
+</head>
+<body>
+    <h1>Upload an Image</h1>
+    <form method="post" action="/output" enctype="multipart/form-data" id="uploadForm">
+        <input type="file" name="image" id="image">
+        <br>
+        <input type="button" value="Predict" onclick="submitForm()">
+    </form>
+</body>
+</html>
+
+

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Defect Prediction Result</title>
+</head>
+<body>
+    <h1>Defect Prediction Result</h1>
+    <h3 id="defectLabel">Predicted Defect Label: <p>{{predicted_defect}}</p></h3>  <!-- Add an empty element to display the predicted defect label -->
+
+    <script>
+        // Send request to Flask API for prediction
+        fetch('C:/Users/Yogesh/Desktop/flash/app.py')  // Update with the correct URL or route for your Flask API
+            .then(response => response.json())
+            .then(data => {
+                // Update the predicted defect label in the output HTML
+                document.getElementById('defectLabel').innerText += data.predicted_defect;
+            })
+            .catch(error => console.error('Error:', error));
+    </script>
+</body>
+</html>
