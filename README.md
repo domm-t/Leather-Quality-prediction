@@ -6,7 +6,9 @@ The application allows users to upload an image of leather, and it then predicts
 
 ## Features:
 Image Upload: Users can upload leather images via a simple web interface.
+
 Defect Prediction: The uploaded image is processed and fed into a deep-learning model to predict the leather defect.
+
 Result Display: Predicted results are showcased to the user on a separate page.
 ## Code Breakdown
 **Imports**
